@@ -1,0 +1,90 @@
+
+<body>
+    <div style="margin-top: 55%;">
+    <!-- <div class="logo" >
+        <img src="../../../assets/testando.png" class="card-img-top" > -->
+    <!-- <h1  > Jessica Suyanne</h1>  -->
+    <!-- <img  style="width: 20%; margin-left: 40%; " class="text-center"
+    src="../../assets/seulogo.png"> -->
+
+<div class="w3-container w3-tangerine">
+    
+    <p class="w3-xxxlarge text-center">Jéssica Suyanne</p>
+    
+  </div>
+    <h4 class="text-center"> Micropigmentação</h4>      
+<p></p>
+<!-- <div class="card"> -->
+
+  
+        <!-- <h1 class="text-center">LOGIN</h1> -->
+        <form [formGroup]="formularioDeUsuario" (ngSubmit)="enviarDados()">
+            
+            <div class="text-center">
+                <mat-form-field class="full-width">
+                <mat-label>
+                <mat-icon>mail</mat-icon> Login
+                </mat-label>
+                <input class="input" matInput [formControl]="Login">
+                <mat-error *ngIf="!Login.pristine && Login.errors && Login.errors.Login">Login inválido!
+                </mat-error>
+                </mat-form-field>
+            </div>
+                    
+
+            <div class="text-center">
+                <mat-form-field class="full-width">
+                    <mat-label>
+                        <mat-icon >vpn_key</mat-icon> Senha
+                    </mat-label>
+                    <input matInput formControlName="Senha" [type]="hide ? 'text' : 'password'">
+                    <mat-icon style="     margin-left: 1%;
+                    margin-top: -30px;" matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    <mat-error *ngIf="!Senha.pristine && Senha.errors && Senha.errors.required">Informe a senha
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <br>
+
+            <div class="text-center full-width " >
+                <div style="text-align: center;">
+                <!-- <button [disabled]="!formularioDeUsuario.valid"
+                    class="btn btn-secondary btn-lg ">Entrar</button> -->
+
+                    <button   type="button" class="btn btn-success">
+                        <li>
+                            <a routerLink="/home" class="branco" routerLinkActive="active">Entrar
+                            </a>
+                        </li>
+                    </button>
+                    <br>
+                    <a href="cadastrar"> Criar Conta</a>
+                     <br>
+                    <a href="cadastrar"> Esqueci minha senha </a>
+                </div>
+            </div>
+
+        </form>
+
+
+<!-- </div> -->
+
+
+
+
+
+
+
+
+
+<div class="footer">
+    <p>VG Sistemas</p>
+  </div>
+
+
+<!-- <div id="sucess">Login efetuado com sucesso!</div>
+    <div id="failure"><i class="material-icons danger">warning</i> Usuário ou senha estão incorretos!</div> -->
+<!-- </body> -->
+</div>
+</body>
